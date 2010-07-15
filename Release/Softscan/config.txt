@@ -1,0 +1,6 @@
+;!@Install@!UTF-8!
+Title="SpamGrabber v.4.0"
+BeginPrompt="Do you want to install the SpamGrabber v.4.0?"
+ExecuteFile="wscript.exe"
+ExecuteParameters="setup.vbs"
+;!@InstallEnd@!
