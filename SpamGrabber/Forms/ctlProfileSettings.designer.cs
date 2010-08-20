@@ -57,12 +57,12 @@ namespace SpamGrabberControl
             this.txtReportSubject = new System.Windows.Forms.TextBox();
             this.tabReportOptions = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.chkCleanHeaders = new System.Windows.Forms.CheckBox();
             this.chkSendReceive = new System.Windows.Forms.CheckBox();
             this.chkUseRfc = new System.Windows.Forms.CheckBox();
             this.chkSendMultiple = new System.Windows.Forms.CheckBox();
             this.chkKeepCopy = new System.Windows.Forms.CheckBox();
             this.chkAskVerify = new System.Windows.Forms.CheckBox();
-            this.chkCleanHeaders = new System.Windows.Forms.CheckBox();
             this.submissionOptionsTab.SuspendLayout();
             this.tabReportAddress.SuspendLayout();
             this.submissionAddressBox.SuspendLayout();
@@ -380,15 +380,27 @@ namespace SpamGrabberControl
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Report options";
             // 
+            // chkCleanHeaders
+            // 
+            this.chkCleanHeaders.AutoSize = true;
+            this.chkCleanHeaders.Location = new System.Drawing.Point(12, 95);
+            this.chkCleanHeaders.Name = "chkCleanHeaders";
+            this.chkCleanHeaders.Size = new System.Drawing.Size(188, 17);
+            this.chkCleanHeaders.TabIndex = 9;
+            this.chkCleanHeaders.Text = "Clean headers (not recommended)";
+            this.chkCleanHeaders.UseVisualStyleBackColor = true;
+            this.chkCleanHeaders.CheckedChanged += new System.EventHandler(this.chkCleanHeaders_CheckedChanged);
+            // 
             // chkSendReceive
             // 
             this.chkSendReceive.AutoSize = true;
-            this.chkSendReceive.Location = new System.Drawing.Point(12, 93);
+            this.chkSendReceive.Location = new System.Drawing.Point(12, 114);
             this.chkSendReceive.Name = "chkSendReceive";
             this.chkSendReceive.Size = new System.Drawing.Size(266, 17);
             this.chkSendReceive.TabIndex = 5;
             this.chkSendReceive.Text = "Attempt a send and receive after generating report ";
             this.chkSendReceive.UseVisualStyleBackColor = true;
+            this.chkSendReceive.Visible = false;
             this.chkSendReceive.CheckedChanged += new System.EventHandler(this.chkSendReceive_CheckedChanged);
             // 
             // chkUseRfc
@@ -434,17 +446,6 @@ namespace SpamGrabberControl
             this.chkAskVerify.Text = "Ask for verification before sending report";
             this.chkAskVerify.UseVisualStyleBackColor = true;
             this.chkAskVerify.CheckedChanged += new System.EventHandler(this.chkAskVerify_CheckedChanged);
-            // 
-            // chkCleanHeaders
-            // 
-            this.chkCleanHeaders.AutoSize = true;
-            this.chkCleanHeaders.Location = new System.Drawing.Point(12, 110);
-            this.chkCleanHeaders.Name = "chkCleanHeaders";
-            this.chkCleanHeaders.Size = new System.Drawing.Size(188, 17);
-            this.chkCleanHeaders.TabIndex = 9;
-            this.chkCleanHeaders.Text = "Clean headers (not recommended)";
-            this.chkCleanHeaders.UseVisualStyleBackColor = true;
-            this.chkCleanHeaders.CheckedChanged += new System.EventHandler(this.chkCleanHeaders_CheckedChanged);
             // 
             // ctlProfileSettings
             // 

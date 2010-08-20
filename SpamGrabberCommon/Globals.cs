@@ -500,6 +500,95 @@ namespace SpamGrabberCommon
             else
                 return regkey.ToString();
         }
+
+        /// <summary>
+        /// the original VB code for repairing headers. This is used if selected by user.
+        /// </summary>
+        /// <param name="header">The header to fix</param>
+        /// <param name="msgIsHTML">Wheter or not it is a HTML mail</param>
+        /// <returns>The fixed header</returns>
+        public static string RepairHeaders(string pstrHeader, bool pblnMsgIsHTML)
+        {
+            List<string> lstHeader = new List<string>();
+            List<string> tempLines = new List<string>();
+            string removeString, removeString2;
+            bool headerFlag;
+
+
+            string[] del = new string[] { "\r\n" };
+            lstHeader.AddRange(pstrHeader.Split(new string[] { "\r\n\r\n" }, StringSplitOptions.None));
+
+            string msgHeaders = "";
+            string tempHeader = "";
+            //' OK, first we need to break off any boundary headers which are
+            //' caused by attachments etc. These are easy to get rid of, as
+            //' they always appear two CrLfs after the main headers, so
+            //' we just do a split on a double CrLf and take the first part
+            msgHeaders = lstHeader[0];
+
+            //' Loop through each line in the headers and remove any
+            //' Content-type lines or Microsoft headers
+            removeString = "Content-Type";
+            removeString2 = "Microsoft Mail Internet Headers Version 2.0";
+            headerFlag = false;
+            tempLines.AddRange(msgHeaders.Split(del, StringSplitOptions.None));
+
+            foreach (string tempLine in tempLines)
+            {
+                if (tempLine != string.Empty)
+                {
+                    if (headerFlag)
+                    {
+                        //' Flag is on, so we need to see if this is a normal header or
+                        //' a continuation header
+                        if (tempLine.Substring(0, 1) == " " || tempLine.Substring(0, 1) == "\t")
+                        { }   // ' It is a continuation, so do nothing
+                        else
+                        {
+                            //' New header, check to make sure it isn't the
+                            //' MS one, and add it
+                            if (tempLine.Contains(removeString2))
+                            {    //' Just add the header
+                                tempHeader += tempLine + "\r\n";
+                            }
+                            //' Reset the flag
+                            headerFlag = false;
+                        }
+                    }
+                    else
+                    {  //' Flag is off, so check to see if this is a content type header
+                        if (tempLine.Contains(removeString))
+                        {    //' This is a content type header, so set the flag and ignore the header
+                            headerFlag = true;
+                        }
+                        else
+                        {
+                            //' Not a content type header, so check for the MS header and add
+                            if (!tempLine.Contains(removeString2))
+                            {
+                                //' Just add the header
+                                tempHeader += tempLine + "\r\n";
+                            }
+                        }
+                    }
+                }
+            }
+
+            //' Add the correct content type header at the end
+            tempHeader = tempHeader + "Content-Type: text/";
+            if (pblnMsgIsHTML)
+            {
+                tempHeader = tempHeader + "html;";
+            }
+            else
+            {
+                tempHeader = tempHeader + "plain;";
+            }
+
+            //' Set the reporting headers to the cleaned headers
+            return tempHeader + "\r\n\r\n";
+        }
+
         #endregion
     }
 

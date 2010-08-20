@@ -372,7 +372,7 @@ namespace SpamGrabberCommon
                 if (this._blnSendReceiveAfterReport == null)
                 {
                     // Default
-                    this._blnSendReceiveAfterReport = true;
+                    this._blnSendReceiveAfterReport = false;
                 }
                 return (bool)this._blnSendReceiveAfterReport;
             }

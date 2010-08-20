@@ -29,7 +29,7 @@ namespace SpamGrabber
             Explorer exp = Globals.ThisAddIn.Application.ActiveExplorer();
             if (exp.Selection.Count > 0)
             {
-                Clipboard.SetText(GetMessageSource((MailItem)exp.Selection[1]));
+                Clipboard.SetText(GetMessageSource((MailItem)exp.Selection[1], false));
             }
         }
 
@@ -48,6 +48,14 @@ namespace SpamGrabber
             catch (System.Exception ex) // TODO we should not catch all exceptions
             {
                 MessageBox.Show("caught: \r\n" + ex.ToString());
+            }
+        }
+
+        private void btnReportCustom_Click(object sender, RibbonControlEventArgs e)
+        {
+            if (this.ddlReportTo.SelectedItem != null)
+            {
+                this.SendReports(this.ddlReportTo.SelectedItem.Tag.ToString());
             }
         }
 
@@ -76,6 +84,10 @@ namespace SpamGrabber
             {
                 reportEmail.To += toAddress + ";";
             }
+            foreach (string bccAddress in profile.BccAddresses)
+            {
+                reportEmail.BCC += bccAddress + ";";
+            }
             reportEmail.BodyFormat = OlBodyFormat.olFormatPlain;
             reportEmail.Body = profile.MessageBody;
 
@@ -87,12 +99,19 @@ namespace SpamGrabber
                 if (item is MailItem){
                     bItemsSelected = true;
                     MailItem mail = (MailItem)item;
-                    // Create temp file
-                    string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".txt");
-                    TextWriter tw = new StreamWriter(fileName);
-                    tw.Write(GetMessageSource(mail));
-                    tw.Close();
-                    reportEmail.Attachments.Add(fileName);
+                    if (profile.UseRFC)
+                    {
+                        reportEmail.Attachments.Add(mail, typeof(MailItem));
+                    }
+                    else
+                    {
+                        // Create temp file
+                        string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".txt");
+                        TextWriter tw = new StreamWriter(fileName);
+                        tw.Write(GetMessageSource(mail, profile.CleanHeaders));
+                        tw.Close();
+                        reportEmail.Attachments.Add(fileName);
+                    }
                 }
             }
             
@@ -128,6 +147,9 @@ namespace SpamGrabber
                         }
                     }
                 }
+
+                // Send / receive
+
             }
             else
             {
@@ -149,10 +171,11 @@ namespace SpamGrabber
             this.ShowHideButtons();
         }
 
-        private string GetMessageSource(MailItem message)
+        private string GetMessageSource(MailItem message, bool cleanHeaders)
         {
+            string headers = message.PropertyAccessor.GetProperty("http://schemas.microsoft.com/mapi/proptag/0x007D001E");
             return string.Format("{1}{2}", Environment.NewLine,
-                message.PropertyAccessor.GetProperty("http://schemas.microsoft.com/mapi/proptag/0x007D001E"),
+                cleanHeaders ? SpamGrabberCommon.SGGlobals.RepairHeaders(headers, message.BodyFormat.Equals(OlBodyFormat.olFormatHTML)) : headers,
                 message.BodyFormat == OlBodyFormat.olFormatHTML ? message.HTMLBody : message.Body);
         }
 
@@ -166,13 +189,5 @@ namespace SpamGrabber
         }
 
         #endregion
-
-        private void btnReportCustom_Click(object sender, RibbonControlEventArgs e)
-        {
-            if (this.ddlReportTo.SelectedItem != null)
-            {
-                this.SendReports(this.ddlReportTo.SelectedItem.Tag.ToString());
-            }
-        }
     }
 }
