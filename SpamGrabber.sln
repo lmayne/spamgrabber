@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabber", "SpamGrabber\SpamGrabber.csproj", "{B687AB9C-105F-458A-96B0-068FD9AE0BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabberCommon", "SpamGrabberCommon\SpamGrabberCommon.csproj", "{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SpamGrabber Setup", "SpamGrabber Setup\SpamGrabber Setup.vdproj", "{E6244039-D574-4CB1-A146-923FFDE0AAF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B687AB9C-105F-458A-96B0-068FD9AE0BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B687AB9C-105F-458A-96B0-068FD9AE0BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B687AB9C-105F-458A-96B0-068FD9AE0BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B687AB9C-105F-458A-96B0-068FD9AE0BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Debug|Any CPU.ActiveCfg = Debug
+		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
