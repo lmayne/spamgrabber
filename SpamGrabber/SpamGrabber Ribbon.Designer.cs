@@ -121,6 +121,7 @@
             this.btnSafeView.Label = "Safe View";
             this.btnSafeView.Name = "btnSafeView";
             this.btnSafeView.ShowImage = true;
+            this.btnSafeView.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSafeView_Click);
             // 
             // btnCopyToClipboard
             // 

@@ -1,6 +1,15 @@
-namespace SpamGrabberCommon
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using SpamGrabberCommon;
+
+namespace SpamGrabberControl
 {
-    partial class frmPreview
+    partial class frmPreview : Form
     {
         /// <summary>
         /// Required designer variable.

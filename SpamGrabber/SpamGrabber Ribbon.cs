@@ -59,6 +59,22 @@ namespace SpamGrabber
             }
         }
 
+        private void btnSafeView_Click(object sender, RibbonControlEventArgs e)
+        {
+            Explorer exp = Globals.ThisAddIn.Application.ActiveExplorer();
+            if (exp.Selection.Count > 0)
+            {
+                frmPreview objPreview = new frmPreview();
+                objPreview.ClearItems();
+                foreach (object objItem in exp.Selection)
+                {
+                    if (objItem is MailItem || objItem is PostItem)
+                        objPreview.Items.Add(objItem);
+                }
+                objPreview.ShowDialog();
+            }
+        }
+
         #endregion
 
         #region Common Functions
@@ -101,7 +117,7 @@ namespace SpamGrabber
                     MailItem mail = (MailItem)item;
                     if (profile.UseRFC)
                     {
-                        reportEmail.Attachments.Add(mail, typeof(MailItem));
+                        reportEmail.Attachments.Add(mail, OlAttachmentType.olEmbeddeditem);
                     }
                     else
                     {

@@ -13,7 +13,7 @@ using Office = Microsoft.Office.Core;
 
 #endregion
 
-namespace SpamGrabberCommon
+namespace SpamGrabberControl
 {
     /// <summary>
     /// Message preview form
