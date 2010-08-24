@@ -93,54 +93,83 @@ namespace SpamGrabber
 
             Explorer exp = Globals.ThisAddIn.Application.ActiveExplorer();
 
-            // Create the report email
-            MailItem reportEmail = (MailItem)Globals.ThisAddIn.Application.CreateItem(OlItemType.olMailItem);
-            reportEmail.Subject = profile.ReportSubject;
-            foreach (string toAddress in profile.ToAddresses)
-            {
-                reportEmail.To += toAddress + ";";
-            }
-            foreach (string bccAddress in profile.BccAddresses)
-            {
-                reportEmail.BCC += bccAddress + ";";
-            }
-            reportEmail.BodyFormat = OlBodyFormat.olFormatPlain;
-            reportEmail.Body = profile.MessageBody;
+            // Create a collection to hold references to the attachments
+            List<string> attachmentFiles = new List<string>();
 
             // Make sure at least one item is sent
             bool bItemsSelected = false;
 
-            foreach (Object item in exp.Selection)
+            for (int i = 1; i <= exp.Selection.Count; i++)
             {
-                if (item is MailItem){
+                if (exp.Selection[i] is MailItem)
+                {
                     bItemsSelected = true;
-                    MailItem mail = (MailItem)item;
+                    MailItem mail = (MailItem)exp.Selection[i];
+
+                    // If the item has not been downloaded, quickly open and close it to download it
+                    // TODO: Find a better way of downloading emails
+                    if (mail.DownloadState == OlDownloadState.olHeaderOnly)
+                    {
+                        mail.Display();
+                        mail.Close(OlInspectorClose.olDiscard);
+                    }
                     if (profile.UseRFC)
                     {
-                        reportEmail.Attachments.Add(mail, OlAttachmentType.olEmbeddeditem);
+                        // Direct attaching seems to be buggy. Save the mailitem first
+                        string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".msg");
+                        mail.SaveAs(fileName);
+                        attachmentFiles.Add(fileName);
                     }
                     else
                     {
-                        // Create temp file
+                        // Create temp text file
                         string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".txt");
                         TextWriter tw = new StreamWriter(fileName);
                         tw.Write(GetMessageSource(mail, profile.CleanHeaders));
                         tw.Close();
-                        reportEmail.Attachments.Add(fileName);
+                        attachmentFiles.Add(fileName);
                     }
                 }
             }
             
             if (bItemsSelected)
             {
-                // Do we need to keep a copy
-                if (!profile.KeepCopy)
+                // Are we using a single email or one per report?
+                if (profile.SendMultiple)
                 {
-                    reportEmail.DeleteAfterSubmit = true;
-                }
+                    // Create the report email
+                    MailItem reportEmail = CreateReportEmail(profile);
 
-                // Send the report
-                reportEmail.Send();
+                    // Attach the files
+                    foreach (string attachment in attachmentFiles)
+                    {
+                        reportEmail.Attachments.Add(attachment);
+                    }
+
+                    // Send the report
+                    reportEmail.Send();
+
+                    // Do we need to keep a copy?
+                    if (!profile.KeepCopy)
+                    {
+                        reportEmail.Delete();
+                    }
+                }
+                else
+                {
+                    // Send one email per report
+                    foreach (string attachment in attachmentFiles)
+                    {
+                        MailItem reportEmail = CreateReportEmail(profile);
+                        reportEmail.Attachments.Add(attachment);
+                        reportEmail.Send();
+                        // Do we need to keep a copy?
+                        if (!profile.KeepCopy)
+                        {
+                            reportEmail.Delete();
+                        }
+                    }
+                }
 
                 // Sort out actions on the source emails
                 foreach (Object item in exp.Selection)
@@ -163,13 +192,6 @@ namespace SpamGrabber
                         }
                     }
                 }
-
-                // Send / receive
-
-            }
-            else
-            {
-                reportEmail.Delete();
             }
         }
 
@@ -202,6 +224,24 @@ namespace SpamGrabber
             this.btnSafeView.Visible = SpamGrabberCommon.GlobalSettings.ShowPreviewButton;
             this.gpSettings.Visible = SpamGrabberCommon.GlobalSettings.ShowSettingsButton;
             this.boxReportTo.Visible = SpamGrabberCommon.GlobalSettings.ShowSelectButton;
+        }
+
+        private MailItem CreateReportEmail(SpamGrabberCommon.Profile profile)
+        {
+            // Create the report email
+            MailItem reportEmail = (MailItem)Globals.ThisAddIn.Application.CreateItem(OlItemType.olMailItem);
+            reportEmail.Subject = profile.ReportSubject;
+            foreach (string toAddress in profile.ToAddresses)
+            {
+                reportEmail.To += toAddress + ";";
+            }
+            foreach (string bccAddress in profile.BccAddresses)
+            {
+                reportEmail.BCC += bccAddress + ";";
+            }
+            reportEmail.BodyFormat = OlBodyFormat.olFormatPlain;
+            reportEmail.Body = profile.MessageBody;
+            return reportEmail;
         }
 
         #endregion

@@ -15,20 +15,26 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_080C8A1ECF2617813FF8C77E86E3003E"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1DC09ED04BECD15532DD7455B285859B"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_27B7743802151805F42203C78BBCAD22"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_2B2C7D6661FA5FF5881EE237E60AE563"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,19 +58,25 @@
         "Entry"
         {
         "MsmKey" = "8:_30831AFE1269534B4B82CE30023123F2"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3F5DE18D32214757C74114679A16F443"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3F5DE18D32214757C74114679A16F443"
         "OwnerKey" = "8:_7C3914A0310CE1DA3A97308CA411F0F1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_46FD9D96E9FD42629B82ABECE3DA64F9"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,31 +88,31 @@
         "Entry"
         {
         "MsmKey" = "8:_5F3C644C46894C83EC8A6162840E045B"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_7C3914A0310CE1DA3A97308CA411F0F1"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8B78F213F036762016DF8E32FEFAE128"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "MsmKey" = "8:_9E9C60EC870B4676849F9E6739AF1E6F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BAE7C0CBDB5729EE52A6B367F5BDA5B7"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,13 +124,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8B78F213F036762016DF8E32FEFAE128"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BE0A374133C641B9BEFFEE345A8CFCA2"
+        "OwnerKey" = "8:_080C8A1ECF2617813FF8C77E86E3003E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -181,6 +193,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -197,6 +217,32 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.VSTORuntime.4.0"
+                    {
+                    "Name" = "8:Microsoft Visual Studio 2010 Tools for Office Runtime (x86 and x64)"
+                    "ProductCode" = "8:Microsoft.VSTORuntime.4.0"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -226,6 +272,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_080C8A1ECF2617813FF8C77E86E3003E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_080C8A1ECF2617813FF8C77E86E3003E"
+                    {
+                    "Name" = "8:SpamGrabberCommon.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:SpamGrabberCommon.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1DC09ED04BECD15532DD7455B285859B"
             {
             "AssemblyRegister" = "3:1"
@@ -284,7 +361,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -377,8 +454,28 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46FD9D96E9FD42629B82ABECE3DA64F9"
+            {
+            "SourcePath" = "8:..\\SpamGrabber\\bin\\Release\\SpamGrabber.vsto"
+            "TargetName" = "8:SpamGrabber.vsto"
+            "Tag" = "8:"
+            "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5F3C644C46894C83EC8A6162840E045B"
@@ -439,20 +536,14 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8B78F213F036762016DF8E32FEFAE128"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E9C60EC870B4676849F9E6739AF1E6F"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:SpamGrabberCommon.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\SpamGrabber\\bin\\Release\\SpamGrabber.dll.manifest"
+            "TargetName" = "8:SpamGrabber.dll.manifest"
             "Tag" = "8:"
             "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
             "Condition" = "8:"
@@ -466,7 +557,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BAE7C0CBDB5729EE52A6B367F5BDA5B7"
@@ -543,9 +634,45 @@
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_244300D1F2F94161BAD5F3D792AAF7DB"
+            {
+            "Name" = "8:Verify Office 2010 Shared PIA availability"
+            "Condition" = "8:HASSHAREDPIA"
+            "Message" = "8:A required component for interacting with Excel is not available. Please run setup.exe."
+            "InstallUrl" = "8:"
+            }
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_6E3A0B7CBAB3436CA5198FC4456E0511"
+            {
+            "Name" = "8:Verify VSTO 2010 Runtime availability"
+            "Condition" = "8:VSTORUNTIMEREDIST>=\"10.0.30319\" OR OFFICERUNTIME>=”10.0.21022”"
+            "Message" = "8:The Visual Studio 2010 Tools for Office Runtime is not installed. Please run Setup.exe."
+            "InstallUrl" = "8:"
+            }
         }
         "Locator"
         {
+            "{B8A5E33E-1082-4FE2-AC2E-1197791E9409}:_14F54D0ACE194AAD96C2B21F5CBCA398"
+            {
+            "Name" = "8:Search for Office 2010 Shared PIA"
+            "ComponentId" = "8:{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}"
+            "Property" = "8:HASSHAREDPIA"
+            }
+            "{CF66B7F7-B7DA-4B08-A67A-233430638C9C}:_7C611D3D1A7C41A1AB03B7A05F5B5BC3"
+            {
+            "Name" = "8:Search for VSTO 2010 Runtime"
+            "Root" = "2:1"
+            "RegKey" = "8:SOFTWARE\\Microsoft\\VSTO Runtime Setup\\v4R"
+            "Value" = "8:Version"
+            "Property" = "8:VSTORUNTIMEREDIST"
+            }
+            "{CF66B7F7-B7DA-4B08-A67A-233430638C9C}:_7F48D6791E554E9BA9B5FBA77D023C1C"
+            {
+            "Name" = "8:Search for Office 2010 VSTO Runtime"
+            "Root" = "2:1"
+            "RegKey" = "8:SOFTWARE\\Microsoft\\VSTO Runtime Setup\\v4"
+            "Value" = "8:Version"
+            "Property" = "8:OFFICERUNTIME"
+            }
         }
         "MsiBootstrapper"
         {
@@ -598,15 +725,103 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F9FF061BFA384848A7C00F7822CB37A9"
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_50451D31EAFE4318B59BC466E5D47BBE"
                             {
-                            "Name" = "8:[Manufacturer]"
+                            "Name" = "8:Microsoft"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:FALSE"
                             "Transitive" = "11:FALSE"
                                 "Keys"
                                 {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_34C7D79A545B451992309C1D66BE6343"
+                                    {
+                                    "Name" = "8:Office"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_19B527C8221540B59EAAF28FE1071497"
+                                            {
+                                            "Name" = "8:Outlook"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_3CB7BBCEA53D42378C84D0B7999AA58A"
+                                                    {
+                                                    "Name" = "8:Addins"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1FDB452811A14C8BB9EFABF53652A5AA"
+                                                            {
+                                                            "Name" = "8:SpamGrabber"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_06A280D54ACC487FAC4098E1B07E97BD"
+                                                                    {
+                                                                    "Name" = "8:FriendlyName"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:SpamGrabber"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_1FCB1FEFAEF4429DA3C7DEFEF7297A64"
+                                                                    {
+                                                                    "Name" = "8:LoadBehavior"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:3"
+                                                                    "Value" = "3:3"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_4A436F9A876F411EB4D2C68AA5942267"
+                                                                    {
+                                                                    "Name" = "8:Manifest"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:[TARGETDIR]SpamGrabber.vsto|vstolocal"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_522FFE0A3896494DB96B67317551217F"
+                                                                    {
+                                                                    "Name" = "8:Description"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:SpamGrabber spam reporting plugin for Outlook"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
                                 }
                                 "Values"
                                 {
@@ -632,20 +847,6 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_6E2DDAA22842410B9B74A35C16AFEF24"
-                            {
-                            "Name" = "8:[Manufacturer]"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                }
-                                "Values"
-                                {
-                                }
-                            }
                         }
                         "Values"
                         {
@@ -1076,7 +1277,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_BE0A374133C641B9BEFFEE345A8CFCA2"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A79FA5F5D3E8482C81D2231682FB33F7"
             {
             "SourcePath" = "8:..\\SpamGrabber\\obj\\Release\\SpamGrabber.dll"
             "TargetName" = "8:"
@@ -1095,7 +1296,7 @@
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:2"
+            "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{B687AB9C-105F-458A-96B0-068FD9AE0BAE}"
