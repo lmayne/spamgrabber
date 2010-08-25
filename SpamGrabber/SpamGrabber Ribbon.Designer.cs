@@ -34,7 +34,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab1 = this.Factory.CreateRibbonTab();
+            this.tabSpamGrabber = this.Factory.CreateRibbonTab();
             this.Report = this.Factory.CreateRibbonGroup();
             this.ButtonGroup1 = this.Factory.CreateRibbonButtonGroup();
             this.btnReportDefaultSpam = this.Factory.CreateRibbonButton();
@@ -47,21 +47,22 @@
             this.btnCopyToClipboard = this.Factory.CreateRibbonButton();
             this.gpSettings = this.Factory.CreateRibbonGroup();
             this.btnSettings = this.Factory.CreateRibbonButton();
-            this.tab1.SuspendLayout();
+            this.tabSpamGrabber.SuspendLayout();
             this.Report.SuspendLayout();
             this.ButtonGroup1.SuspendLayout();
             this.boxReportTo.SuspendLayout();
             this.grSource.SuspendLayout();
             this.gpSettings.SuspendLayout();
             // 
-            // tab1
+            // tabSpamGrabber
             // 
-            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.Groups.Add(this.Report);
-            this.tab1.Groups.Add(this.grSource);
-            this.tab1.Groups.Add(this.gpSettings);
-            this.tab1.Label = "SpamGrabber";
-            this.tab1.Name = "tab1";
+            this.tabSpamGrabber.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+            this.tabSpamGrabber.ControlId.OfficeId = "TabSpamGrabber";
+            this.tabSpamGrabber.Groups.Add(this.Report);
+            this.tabSpamGrabber.Groups.Add(this.grSource);
+            this.tabSpamGrabber.Groups.Add(this.gpSettings);
+            this.tabSpamGrabber.Label = "SpamGrabber";
+            this.tabSpamGrabber.Name = "tabSpamGrabber";
             // 
             // Report
             // 
@@ -149,10 +150,10 @@
             // 
             this.Name = "SpamGrabber_Ribbon";
             this.RibbonType = "Microsoft.Outlook.Explorer";
-            this.Tabs.Add(this.tab1);
+            this.Tabs.Add(this.tabSpamGrabber);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.SpamGrabber_Ribbon_Load);
-            this.tab1.ResumeLayout(false);
-            this.tab1.PerformLayout();
+            this.tabSpamGrabber.ResumeLayout(false);
+            this.tabSpamGrabber.PerformLayout();
             this.Report.ResumeLayout(false);
             this.Report.PerformLayout();
             this.ButtonGroup1.ResumeLayout(false);
@@ -168,7 +169,7 @@
 
         #endregion
 
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonTab tabSpamGrabber;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup Report;
         internal Microsoft.Office.Tools.Ribbon.RibbonButtonGroup ButtonGroup1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnReportDefaultSpam;

@@ -41,6 +41,8 @@ namespace SpamGrabber
                 myOptions.ShowDialog();
                 if (myOptions.DialogResult == DialogResult.OK)
                 {
+                    // Refresh the drop down items
+                    this.LoadDropDown();
                     // Refresh the command bar
                     this.ShowHideButtons();
                 }
@@ -197,22 +199,27 @@ namespace SpamGrabber
 
         private void SpamGrabber_Ribbon_Load(object sender, RibbonUIEventArgs e)
         {
+            // Load the drop down items
+            this.LoadDropDown();
+            // Show / hide buttons based on settings
+            this.ShowHideButtons();
+        }
+
+        private void LoadDropDown()
+        {
             foreach (SpamGrabberCommon.Profile profile in SpamGrabberCommon.UserProfiles.ProfileList)
             {
-                //SpamGrabberCommon.Profile profile = new SpamGrabberCommon.Profile(profileID);
                 RibbonDropDownItem item = Globals.Factory.GetRibbonFactory().CreateRibbonDropDownItem();
                 item.Label = profile.Name;
                 item.Tag = profile.Id;
                 this.ddlReportTo.Items.Add(item);
             }
-            // Show / hide buttons based on settings
-            this.ShowHideButtons();
         }
 
         private string GetMessageSource(MailItem message, bool cleanHeaders)
         {
             string headers = message.PropertyAccessor.GetProperty("http://schemas.microsoft.com/mapi/proptag/0x007D001E");
-            return string.Format("{1}{2}", Environment.NewLine,
+            return string.Format("{1}{0}{2}", Environment.NewLine,
                 cleanHeaders ? SpamGrabberCommon.SGGlobals.RepairHeaders(headers, message.BodyFormat.Equals(OlBodyFormat.olFormatHTML)) : headers,
                 message.BodyFormat == OlBodyFormat.olFormatHTML ? message.HTMLBody : message.Body);
         }
