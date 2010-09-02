@@ -128,12 +128,12 @@ namespace SpamGrabber
                         mail.MarkForDownload = OlRemoteStatus.olMarkedForDownload;
                         mail.Save();
                     }
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(mail);
                 }
             }
             if (bNeedsSendReceive)
             {
                 Globals.ThisAddIn.Application.Session.SendAndReceive(false);
-                System.Threading.Thread.Sleep(1000);
             }
 
             if (bItemsSelected)
@@ -160,6 +160,7 @@ namespace SpamGrabber
                             tw.Close();
                             attachmentFiles.Add(fileName);
                         }
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(mail);
                     }
                 }
             
@@ -183,6 +184,7 @@ namespace SpamGrabber
                     {
                         reportEmail.Delete();
                     }
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(reportEmail);
                 }
                 else
                 {
@@ -197,15 +199,16 @@ namespace SpamGrabber
                         {
                             reportEmail.Delete();
                         }
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(reportEmail);
                     }
                 }
 
                 // Sort out actions on the source emails
-                foreach (Object item in exp.Selection)
+                for (int i = 1; i <= exp.Selection.Count; i++)
                 {
-                    if (item is MailItem)
+                    if (exp.Selection[i] is MailItem)
                     {
-                        MailItem mail = (MailItem)item;
+                        MailItem mail = (MailItem)exp.Selection[i];
                         if (profile.MarkAsReadAfterReport)
                         {
                             mail.UnRead = false;
@@ -219,6 +222,7 @@ namespace SpamGrabber
                             mail.Move(Globals.ThisAddIn.Application.GetNamespace("MAPI").GetFolderFromID(
                                 profile.MoveFolderName, profile.MoveFolderStoreId));
                         }
+                        System.Runtime.InteropServices.Marshal.ReleaseComObject(mail);
                     }
                 }
             }
