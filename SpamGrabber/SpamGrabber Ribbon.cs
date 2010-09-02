@@ -24,6 +24,16 @@ namespace SpamGrabber
             SendReports(SpamGrabberCommon.GlobalSettings.DefaultSpamProfileId);
         }
 
+        private void btnReportDefaultHam_Click(object sender, RibbonControlEventArgs e)
+        {
+            if (string.IsNullOrEmpty(SpamGrabberCommon.GlobalSettings.DefaultHamProfileId))
+            {
+                MessageBox.Show("You have not yet set a default ham profile. Please open the SpamGrabber settings dialog and set a default ham profile");
+                return;
+            }
+            SendReports(SpamGrabberCommon.GlobalSettings.DefaultHamProfileId);
+        }
+
         private void btnCopyToClipboard_Click(object sender, RibbonControlEventArgs e)
         {
             Explorer exp = Globals.ThisAddIn.Application.ActiveExplorer();
@@ -101,41 +111,58 @@ namespace SpamGrabber
             // Make sure at least one item is sent
             bool bItemsSelected = false;
 
+            // First make sure the selected emails have been downloaded
+            bool bNeedsSendReceive = false;
             for (int i = 1; i <= exp.Selection.Count; i++)
             {
                 if (exp.Selection[i] is MailItem)
                 {
-                    bItemsSelected = true;
                     MailItem mail = (MailItem)exp.Selection[i];
+                    bItemsSelected = true;
 
                     // If the item has not been downloaded, quickly open and close it to download it
                     // TODO: Find a better way of downloading emails
                     if (mail.DownloadState == OlDownloadState.olHeaderOnly)
                     {
-                        mail.Display();
-                        mail.Close(OlInspectorClose.olDiscard);
-                    }
-                    if (profile.UseRFC)
-                    {
-                        // Direct attaching seems to be buggy. Save the mailitem first
-                        string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".msg");
-                        mail.SaveAs(fileName);
-                        attachmentFiles.Add(fileName);
-                    }
-                    else
-                    {
-                        // Create temp text file
-                        string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".txt");
-                        TextWriter tw = new StreamWriter(fileName);
-                        tw.Write(GetMessageSource(mail, profile.CleanHeaders));
-                        tw.Close();
-                        attachmentFiles.Add(fileName);
+                        bNeedsSendReceive = true;
+                        mail.MarkForDownload = OlRemoteStatus.olMarkedForDownload;
+                        mail.Save();
                     }
                 }
             }
-            
+            if (bNeedsSendReceive)
+            {
+                Globals.ThisAddIn.Application.Session.SendAndReceive(false);
+                System.Threading.Thread.Sleep(1000);
+            }
+
             if (bItemsSelected)
             {
+                // Now get references to all the items
+                for (int i = 1; i <= exp.Selection.Count; i++)
+                {
+                    if (exp.Selection[i] is MailItem)
+                    {
+                        MailItem mail = (MailItem)exp.Selection[i];
+                        if (profile.UseRFC)
+                        {
+                            // Direct attaching seems to be buggy. Save the mailitem first
+                            string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".msg");
+                            mail.SaveAs(fileName);
+                            attachmentFiles.Add(fileName);
+                        }
+                        else
+                        {
+                            // Create temp text file
+                            string fileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName() + ".txt");
+                            TextWriter tw = new StreamWriter(fileName);
+                            tw.Write(GetMessageSource(mail, profile.CleanHeaders));
+                            tw.Close();
+                            attachmentFiles.Add(fileName);
+                        }
+                    }
+                }
+            
                 // Are we using a single email or one per report?
                 if (profile.SendMultiple)
                 {
