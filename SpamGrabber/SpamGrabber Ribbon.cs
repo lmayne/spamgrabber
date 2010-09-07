@@ -238,6 +238,7 @@ namespace SpamGrabber
 
         private void LoadDropDown()
         {
+            this.ddlReportTo.Items.Clear();
             foreach (SpamGrabberCommon.Profile profile in SpamGrabberCommon.UserProfiles.ProfileList)
             {
                 RibbonDropDownItem item = Globals.Factory.GetRibbonFactory().CreateRibbonDropDownItem();
