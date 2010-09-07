@@ -119,9 +119,7 @@ namespace SpamGrabber
                 {
                     MailItem mail = (MailItem)exp.Selection[i];
                     bItemsSelected = true;
-
-                    // If the item has not been downloaded, quickly open and close it to download it
-                    // TODO: Find a better way of downloading emails
+                    // If the item has not been downloaded, mark for download
                     if (mail.DownloadState == OlDownloadState.olHeaderOnly)
                     {
                         bNeedsSendReceive = true;
@@ -133,7 +131,12 @@ namespace SpamGrabber
             }
             if (bNeedsSendReceive)
             {
+                // Download the marked emails
+                // TODO: Trying to carry on at this point returns blank email bodies. Try and find a way of downloading them properly.
                 Globals.ThisAddIn.Application.Session.SendAndReceive(false);
+                MessageBox.Show("One of more emails were not downloaded from the server. Please ensure they are now downloaded and click report again",
+                    "SpamGrabber", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
 
             if (bItemsSelected)
