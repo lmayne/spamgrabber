@@ -14,12 +14,8 @@ namespace SpamGrabberControl
         public ctlAbout()
         {
             InitializeComponent();
-            this.linkLabel1.Links[0].LinkData = "SoftScan";
-            this.linkLabel1.Links.Add(0, 8, "www.softscan.co.uk");
-
             this.linkLabel2.Links[0].LinkData = "SpamGrabber";
             this.linkLabel2.Links.Add(0, 11 ,"www.spamgrabber.org");
-            
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

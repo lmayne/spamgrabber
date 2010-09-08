@@ -410,7 +410,7 @@ namespace SpamGrabberControl
             this.chkUseRfc.Name = "chkUseRfc";
             this.chkUseRfc.Size = new System.Drawing.Size(364, 17);
             this.chkUseRfc.TabIndex = 4;
-            this.chkUseRfc.Text = "Use RFC822 for attachments (not compatable with Spamcop/SoftScan)";
+            this.chkUseRfc.Text = "Use RFC822 for attachments (not compatable with Spamcop)";
             this.chkUseRfc.UseVisualStyleBackColor = true;
             this.chkUseRfc.CheckedChanged += new System.EventHandler(this.chkUseRfc_CheckedChanged);
             // 

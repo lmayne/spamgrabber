@@ -730,7 +730,7 @@
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:10.0.0"
+        "ProductVersion" = "8:5.0.0"
         "Manufacturer" = "8:Leon Mayne"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.spamgrabber.org"

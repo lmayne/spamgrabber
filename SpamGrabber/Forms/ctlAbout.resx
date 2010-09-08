@@ -112,17 +112,15 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Outlook Spam Report Utility: version {0} 
+    <value>SpamGrabber Outlook Spam Reporting Utility: version 5.0
 
-Copyright © SoftScan and Leon Mayne 2004-2007. All Rights Reserved. Parts of the code are free available with Copyright © 2002-2007 Leon Mayne.
-
-Ships with licenced copy of Outlook Redemption. Copyright © 2000 - 2007 Dmitry Streblechenko. The right to use Redemption only applies to this product, a seperate licence must be obtained for any other use. 
+Copyright © Leon Mayne 2004-2010. All Rights Reserved.
 
 This is free software. Use it for your own needs. Free version is available at http://www.spamgrabber.org</value>
   </data>
