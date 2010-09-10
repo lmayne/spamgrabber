@@ -46,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_30831AFE1269534B4B82CE30023123F2"
-        "OwnerKey" = "8:_1DC09ED04BECD15532DD7455B285859B"
+        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_30831AFE1269534B4B82CE30023123F2"
-        "OwnerKey" = "8:_A79FA5F5D3E8482C81D2231682FB33F7"
+        "OwnerKey" = "8:_1DC09ED04BECD15532DD7455B285859B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -130,43 +130,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_379BBB78DCB6C0C654AB1F18136C5601"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BAE7C0CBDB5729EE52A6B367F5BDA5B7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5F3C644C46894C83EC8A6162840E045B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7C3914A0310CE1DA3A97308CA411F0F1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1DC09ED04BECD15532DD7455B285859B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3F5DE18D32214757C74114679A16F443"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2B2C7D6661FA5FF5881EE237E60AE563"
+        "OwnerKey" = "8:_27B7743802151805F42203C78BBCAD22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -178,7 +142,43 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_27B7743802151805F42203C78BBCAD22"
+        "OwnerKey" = "8:_2B2C7D6661FA5FF5881EE237E60AE563"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3F5DE18D32214757C74114679A16F443"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1DC09ED04BECD15532DD7455B285859B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7C3914A0310CE1DA3A97308CA411F0F1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5F3C644C46894C83EC8A6162840E045B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BAE7C0CBDB5729EE52A6B367F5BDA5B7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_379BBB78DCB6C0C654AB1F18136C5601"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -298,11 +298,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Outlook, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1DC09ED04BECD15532DD7455B285859B"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Outlook.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Outlook.dll"
             "TargetName" = "8:"
@@ -329,11 +324,6 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_27B7743802151805F42203C78BBCAD22"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
@@ -360,11 +350,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_2B2C7D6661FA5FF5881EE237E60AE563"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.dll"
             "TargetName" = "8:"
@@ -391,11 +376,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_30831AFE1269534B4B82CE30023123F2"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.dll"
             "TargetName" = "8:"
@@ -422,11 +402,6 @@
             "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_379BBB78DCB6C0C654AB1F18136C5601"
-                    {
-                    "Name" = "8:SpamGrabberCommon.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:SpamGrabberCommon.dll"
             "TargetName" = "8:"
@@ -453,11 +428,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3F5DE18D32214757C74114679A16F443"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
             "TargetName" = "8:"
@@ -504,11 +474,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5F3C644C46894C83EC8A6162840E045B"
-                    {
-                    "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
             "TargetName" = "8:"
@@ -555,11 +520,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Outlook.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7C3914A0310CE1DA3A97308CA411F0F1"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"
             "TargetName" = "8:"
@@ -606,11 +566,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BAE7C0CBDB5729EE52A6B367F5BDA5B7"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
             "TargetName" = "8:"
@@ -677,7 +632,7 @@
             {
             "Name" = "8:Verify Office 2010 Shared PIA availability"
             "Condition" = "8:HASSHAREDPIA"
-            "Message" = "8:A required component for interacting with Excel is not available. Please run setup.exe."
+            "Message" = "8:A required component for interacting with Outlook is not available. Please run setup.exe."
             "InstallUrl" = "8:"
             }
             "{836E08B8-0285-4809-BA42-01DB6754A45D}:_6E3A0B7CBAB3436CA5198FC4456E0511"
