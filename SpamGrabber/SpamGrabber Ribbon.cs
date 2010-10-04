@@ -273,14 +273,20 @@ namespace SpamGrabber
             // Create the report email
             MailItem reportEmail = (MailItem)Globals.ThisAddIn.Application.CreateItem(OlItemType.olMailItem);
             reportEmail.Subject = profile.ReportSubject;
+            string strTo = "";
             foreach (string toAddress in profile.ToAddresses)
             {
-                reportEmail.To += toAddress + ";";
+                strTo += toAddress + ";";
             }
+            reportEmail.To = strTo;
+
+            string strBcc = "";
             foreach (string bccAddress in profile.BccAddresses)
             {
-                reportEmail.BCC += bccAddress + ";";
+                strBcc += bccAddress + ";";
             }
+            reportEmail.BCC = strBcc;
+
             reportEmail.BodyFormat = OlBodyFormat.olFormatPlain;
             reportEmail.Body = profile.MessageBody;
             return reportEmail;
