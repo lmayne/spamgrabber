@@ -32,7 +32,7 @@ namespace SpamGrabberCommon
         #region Class Data
 
         private static string _strBaseRegKey = "Software\\SpamGrabber\\";
-        private static string _strEmailRegEx = @"\w+@\w+\.\w+((\.\w+)*)?";
+        private static string _strEmailRegEx = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
 
         public enum ReportAction
         {
