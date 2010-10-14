@@ -148,6 +148,7 @@ namespace SpamGrabberCommon
                         }
                         if (profile.DeleteAfterReport)
                         {
+                            mail.UnRead = false;
                             mail.Delete();
                         }
                         else if (profile.MoveToFolderAfterReport)
