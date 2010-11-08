@@ -109,14 +109,14 @@ namespace SpamGrabberCommon
                         reportEmail.Attachments.Add(attachment);
                     }
 
-                    // Send the report
-                    reportEmail.Send();
-
                     // Do we need to keep a copy?
                     if (!profile.KeepCopy)
                     {
-                        reportEmail.Delete();
+                        reportEmail.DeleteAfterSubmit = true;
                     }
+                    // Send the report
+                    reportEmail.Send();
+
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(reportEmail);
                 }
                 else
@@ -126,12 +126,12 @@ namespace SpamGrabberCommon
                     {
                         MailItem reportEmail = CreateReportEmail(profile);
                         reportEmail.Attachments.Add(attachment);
-                        reportEmail.Send();
                         // Do we need to keep a copy?
                         if (!profile.KeepCopy)
                         {
-                            reportEmail.Delete();
+                            reportEmail.DeleteAfterSubmit = true;
                         }
+                        reportEmail.Send();
                         System.Runtime.InteropServices.Marshal.ReleaseComObject(reportEmail);
                     }
                 }
@@ -146,15 +146,15 @@ namespace SpamGrabberCommon
                         {
                             mail.UnRead = false;
                         }
+                        if (profile.MoveToFolderAfterReport)
+                        {
+                            mail.Move(_app.GetNamespace("MAPI").GetFolderFromID(
+                                profile.MoveFolderName, profile.MoveFolderStoreId));
+                        }
                         if (profile.DeleteAfterReport)
                         {
                             mail.UnRead = false;
                             mail.Delete();
-                        }
-                        else if (profile.MoveToFolderAfterReport)
-                        {
-                            mail.Move(_app.GetNamespace("MAPI").GetFolderFromID(
-                                profile.MoveFolderName, profile.MoveFolderStoreId));
                         }
                         System.Runtime.InteropServices.Marshal.ReleaseComObject(mail);
                     }
