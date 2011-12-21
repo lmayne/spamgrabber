@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Outlook;
+using stdole;
 
 namespace SpamGrabber_2007
 {
@@ -19,16 +20,27 @@ namespace SpamGrabber_2007
         private Office.CommandBarButton _cbbSendToSupport;
         private Office.CommandBarButton _cbbPreview;
         private Office.CommandBarButton _cbbOptions;
+        private Office._CommandBarButtonEvents_ClickEventHandler _ReportSpam;
+        private Office._CommandBarButtonEvents_ClickEventHandler _ReportHam;
+        private Office._CommandBarButtonEvents_ClickEventHandler _SafeView;
+        private Office._CommandBarButtonEvents_ClickEventHandler _CopyToClipboard;
+        private Office._CommandBarButtonEvents_ClickEventHandler _Settings;
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            _ReportSpam = ReportSpam;
+            _ReportHam = ReportHam;
+            _SafeView = SafeView;
+            _CopyToClipboard = CopyToClipboard;
+            _Settings = Settings;
+
             Explorer _objExplorer = Globals.ThisAddIn.Application.ActiveExplorer();
             _cbSpamGrabber = _objExplorer.CommandBars.Add("SpamGrabber", Office.MsoBarPosition.msoBarTop, false, true);
 
             _cbbDefaultSpam = CreateCommandBarButton(_cbSpamGrabber,
                 "Report Spam", "Report to Default Spam profile", "Report to Default Spam profile",
-                1, Office.MsoButtonStyle.msoButtonIconAndCaption,
-                true, true, 1);
+                Office.MsoButtonStyle.msoButtonIconAndCaption, Properties.Resources.spamgrab_red,
+                true, true, 1, _ReportSpam);
 
         }
 
@@ -50,10 +62,10 @@ namespace SpamGrabber_2007
         
         #endregion
 
-        public static Office.CommandBarButton CreateCommandBarButton(
+        private Office.CommandBarButton CreateCommandBarButton(
             Office.CommandBar commandBar, string captionText, string tagText, 
-            string tipText, int faceID, Office.MsoButtonStyle buttonStyle, 
-            bool beginGroup, bool isVisible, object objBefore)
+            string tipText, Office.MsoButtonStyle buttonStyle, System.Drawing.Bitmap picture,
+            bool beginGroup, bool isVisible, object objBefore, Office._CommandBarButtonEvents_ClickEventHandler handler)
         {
             // Determine if button exists
             Office.CommandBarButton aButton = (Office.CommandBarButton)
@@ -71,18 +83,38 @@ namespace SpamGrabber_2007
                 aButton.Tag = tagText;
                 if (buttonStyle != Office.MsoButtonStyle.msoButtonCaption)
                 {
-                    aButton.Picture = (IPictureDisp)GetIPictureDispFromPicture(Properties.Resources.spamgrab_red);
+                    aButton.Picture = (IPictureDisp)AxHost2.GetIPictureDispFromPicture(picture);
                 }
                 aButton.Style = buttonStyle;
                 aButton.TooltipText = tipText;
                 aButton.BeginGroup = beginGroup;
-                //aButton.OnAction = ProgID;
-
+                aButton.Click += handler;
             }
 
             aButton.Visible = isVisible;
 
             return aButton;
+        }
+
+        private void ReportSpam(Office.CommandBarButton btn, ref bool cancel)
+        {
+            System.Windows.Forms.MessageBox.Show("Report spam");
+        }
+        private void ReportHam(Office.CommandBarButton btn, ref bool cancel)
+        {
+
+        }
+        private void SafeView(Office.CommandBarButton btn, ref bool cancel)
+        {
+
+        }
+        private void CopyToClipboard(Office.CommandBarButton btn, ref bool cancel)
+        {
+
+        }
+        private void Settings(Office.CommandBarButton btn, ref bool cancel)
+        {
+
         }
     }
 }

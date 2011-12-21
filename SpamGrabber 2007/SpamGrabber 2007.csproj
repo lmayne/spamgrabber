@@ -205,6 +205,9 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="AxHost2.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
