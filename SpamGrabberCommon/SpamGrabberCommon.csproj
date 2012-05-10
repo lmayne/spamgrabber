@@ -122,6 +122,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -133,6 +134,55 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Forms\ctlAbout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctlAbout.designer.cs">
+      <DependentUpon>ctlAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ctlGeneralOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctlGeneralOptions.designer.cs">
+      <DependentUpon>ctlGeneralOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ctlManageProfiles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctlManageProfiles.designer.cs">
+      <DependentUpon>ctlManageProfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ctlProfileSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctlProfileSettings.designer.cs">
+      <DependentUpon>ctlProfileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewProfile.designer.cs">
+      <DependentUpon>frmNewProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOptions.designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPreview.designer.cs">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectProfile.Designer.cs">
+      <DependentUpon>frmSelectProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UIControl.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="GlobalSettings.cs" />
     <Compile Include="Profiles.cs" />
@@ -160,6 +210,32 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ctlAbout.resx">
+      <DependentUpon>ctlAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ctlGeneralOptions.resx">
+      <DependentUpon>ctlGeneralOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ctlManageProfiles.resx">
+      <DependentUpon>ctlManageProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ctlProfileSettings.resx">
+      <DependentUpon>ctlProfileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewProfile.resx">
+      <DependentUpon>frmNewProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPreview.resx">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectProfile.resx">
+      <DependentUpon>frmSelectProfile.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

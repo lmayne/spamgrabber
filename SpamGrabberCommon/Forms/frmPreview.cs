@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using Outlook = Microsoft.Office.Interop.Outlook;
-using Office = Microsoft.Office.Core;
+//using Office = Microsoft.Office.Core;
 
 #endregion
 
