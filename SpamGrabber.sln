@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabber 2010", "SpamGrabber\SpamGrabber 2010.csproj", "{B687AB9C-105F-458A-96B0-068FD9AE0BAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabber 2010", "SpamGrabber 2010\SpamGrabber 2010.csproj", "{B687AB9C-105F-458A-96B0-068FD9AE0BAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabberCommon", "SpamGrabberCommon\SpamGrabberCommon.csproj", "{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SpamGrabber 2010 Setup", "SpamGrabber Setup\SpamGrabber Setup.vdproj", "{E6244039-D574-4CB1-A146-923FFDE0AAF9}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SpamGrabber 2010 Setup", "SpamGrabber 2010 Setup\SpamGrabber Setup.vdproj", "{E6244039-D574-4CB1-A146-923FFDE0AAF9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabber 2007", "SpamGrabber 2007\SpamGrabber 2007.csproj", "{1E2773AA-7FFA-4359-93B1-2D2F406CA822}"
 EndProject
