@@ -9,6 +9,10 @@ namespace SpamGrabberCommon
     public class Reporting
     {
         private static Microsoft.Office.Interop.Outlook.Application _app;
+
+        /// <summary>
+        /// The application object to work with
+        /// </summary>
         public static Microsoft.Office.Interop.Outlook.Application Application
         {
             get
@@ -21,6 +25,10 @@ namespace SpamGrabberCommon
             }
         }
 
+        /// <summary>
+        /// Sends the selected emails using the specified profile
+        /// </summary>
+        /// <param name="profileID"></param>
         public static void SendReports(string profileID)
         {
             SpamGrabberCommon.Profile profile = new SpamGrabberCommon.Profile(profileID);
@@ -162,6 +170,12 @@ namespace SpamGrabberCommon
             }
         }
 
+        /// <summary>
+        /// Returns the plain text source of the specified email
+        /// </summary>
+        /// <param name="message">The email message to view source of</param>
+        /// <param name="cleanHeaders">Whether to clean out Exchange headers</param>
+        /// <returns></returns>
         public static string GetMessageSource(MailItem message, bool cleanHeaders)
         {
             string headers = message.PropertyAccessor.GetProperty("http://schemas.microsoft.com/mapi/proptag/0x007D001E");
@@ -170,6 +184,12 @@ namespace SpamGrabberCommon
                 message.BodyFormat == OlBodyFormat.olFormatHTML ? message.HTMLBody : message.Body);
         }
 
+        /// <summary>
+        /// Creates a report email using the settings in the specified
+        /// reporting profile
+        /// </summary>
+        /// <param name="profile">The SpamGrabber Profile being used to report to</param>
+        /// <returns></returns>
         private static MailItem CreateReportEmail(SpamGrabberCommon.Profile profile)
         {
             // Create the report email

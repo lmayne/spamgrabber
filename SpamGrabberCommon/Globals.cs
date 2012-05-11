@@ -362,64 +362,6 @@ namespace SpamGrabberCommon
             return Regex.Match(pstrEmail, EmailRegEx).Success;
         }
 
-        ///// <summary>
-        ///// Gets the requested boolean setting from the registry, creating it with the
-        ///// default of true if it does not exist
-        ///// </summary>
-        ///// <param name="pstrSettingName">The setting name as held in the registry</param>
-        ///// <returns></returns>
-        //public static bool GetSettingValue(string pstrSettingName)
-        //{
-        //    // Get the root HKCU key
-        //    RegistryKey regSettings = Registry.CurrentUser;
-
-        //    // Get the root SpamGrabber key
-        //    regSettings = regSettings.OpenSubKey(SGGlobals.BaseRegistryKey, true);
-
-        //    // Make sure the key exists
-        //    if (regSettings == null)
-        //    {
-        //        // Create the default keys
-        //        SGGlobals.CreateBaseKey();
-        //        // and try again
-        //        regSettings = Registry.CurrentUser;
-        //        regSettings = regSettings.OpenSubKey(SGGlobals.BaseRegistryKey, true);
-        //    }
-
-        //    // Return the selected value
-        //    return SGGlobals.LoadValue(regSettings, pstrSettingName, true);
-        //}
-
-        ///// <summary>
-        ///// Gets the requested string setting from the registry, creating it with the
-        ///// supplied default if it does not exist
-        ///// </summary>
-        ///// <param name="pstrSettingName"></param>
-        ///// <param name="pstrDefault"></param>
-        ///// <returns></returns>
-        //public static string GetSettingValue(string pstrSettingName, string pstrDefault)
-        //{
-        //    // Get the root HKCU key
-        //    RegistryKey regSettings = Registry.CurrentUser;
-
-        //    // Get the root SpamGrabber key
-        //    regSettings = regSettings.OpenSubKey(SGGlobals.BaseRegistryKey, true);
-
-        //    // Make sure the key exists
-        //    if (regSettings == null)
-        //    {
-        //        // Create the default keys
-        //        SGGlobals.CreateBaseKey();
-        //        // and try again
-        //        regSettings = Registry.CurrentUser;
-        //        regSettings = regSettings.OpenSubKey(SGGlobals.BaseRegistryKey, true);
-        //    }
-
-        //    // Return the selected value
-        //    return SGGlobals.LoadValue(regSettings, pstrSettingName, pstrDefault);
-
-        //}
-
         /// <summary>
         /// Saves the specified boolean setting to the database
         /// </summary>

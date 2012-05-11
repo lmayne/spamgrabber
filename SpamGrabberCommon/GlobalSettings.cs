@@ -30,16 +30,6 @@ namespace SpamGrabberCommon
         //' Name of commandbar
         public const string COMMANDBAR_NAME = "SpamGrabber";
 
-        // commandbar position information        
-        private static Int32 _intCommandBarLeft;
-        private static Int32 _intCommandBarPosition;
-        private static Int32 _intCommandBarRowIndex;
-        private static Int32 _intCommandBarTop;
-        private static bool _intCommandBarVisible;
-
-
-
-
         //' Name of program
         public const string PROGRAM_NAME = "Outlook Spam Report Utility";
 
@@ -55,73 +45,6 @@ namespace SpamGrabberCommon
         #endregion
 
         #region Properties
-
-
-        public static int CommandBarLeft
-        {
-            get
-            {
-
-                _intCommandBarLeft = SGGlobals.LoadValue(SGGlobals.BaseRegistryKey, "CommandBarLeft", 0);
-
-                return GlobalSettings._intCommandBarLeft;
-            }
-
-            set { GlobalSettings._intCommandBarLeft = value; }
-        }
-
-        public static int CommandBarPosition
-        {
-            get
-            {
-
-                _intCommandBarPosition = SGGlobals.LoadValue(SGGlobals.BaseRegistryKey, "CommandBarPosition", 1);
-
-
-                return GlobalSettings._intCommandBarPosition;
-            }
-
-            set { GlobalSettings._intCommandBarPosition = value; }
-        }
-
-        public static int CommandBarRowIndex
-        {
-            get
-            {
-
-                _intCommandBarRowIndex = SGGlobals.LoadValue(SGGlobals.BaseRegistryKey, "CommandBarRowIndex", 4);
-
-                return GlobalSettings._intCommandBarRowIndex;
-            }
-
-            set { GlobalSettings._intCommandBarRowIndex = value; }
-        }
-
-        public static int CommandBarTop
-        {
-            get
-            {
-
-                _intCommandBarTop = SGGlobals.LoadValue(SGGlobals.BaseRegistryKey, "CommandBarTop", 0);
-
-                return GlobalSettings._intCommandBarTop;
-            }
-
-            set { GlobalSettings._intCommandBarTop = value; }
-        }
-
-        public static bool CommandBarVisible
-        {
-            get
-            {
-
-                _intCommandBarVisible = SGGlobals.LoadValue(SGGlobals.BaseRegistryKey, "CommandBarWidth", true);
-
-                return GlobalSettings._intCommandBarVisible;
-            }
-
-            set { GlobalSettings._intCommandBarVisible = value; }
-        }
 
         /// <summary>
         /// Whether or not the Preview Message button should be displayed
@@ -249,6 +172,9 @@ namespace SpamGrabberCommon
             }
         }
 
+        /// <summary>
+        /// The Id of the default spam profile
+        /// </summary>
         public static string DefaultSpamProfileId
         {
             get
@@ -267,6 +193,9 @@ namespace SpamGrabberCommon
             }
         }
 
+        /// <summary>
+        /// The Id of the default ham profile
+        /// </summary>
         public static string DefaultHamProfileId
         {
             get
@@ -302,13 +231,6 @@ namespace SpamGrabberCommon
             SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "SuppressConfirm", SuppressConfirm);
             SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "DefaultSpamProfileId", DefaultSpamProfileId);
             SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "DefaultHamProfileId", DefaultHamProfileId);
-
-            SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "CommandBarLeft", _intCommandBarLeft);
-            SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "CommandBarPosition", _intCommandBarPosition);
-            SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "CommandBarRowIndex", _intCommandBarRowIndex);
-            SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "CommandBarTop", _intCommandBarTop);
-            SGGlobals.SaveSetting(SGGlobals.BaseRegistryKey, "CommandBarVisible", _intCommandBarVisible);
-
         }
 
         /// <summary>
@@ -334,7 +256,7 @@ namespace SpamGrabberCommon
         /// <summary>
         /// Resets the default Ham / Spam profile
         /// </summary>
-        /// <param name="dftProfile"></param>
+        /// <param name="dftProfile">Which profile type to reset</param>
         public static void ResetDefaultProfile(DefaultType pdftProfile)
         {
             switch (pdftProfile)

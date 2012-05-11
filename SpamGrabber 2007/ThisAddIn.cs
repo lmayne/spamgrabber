@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using Outlook = Microsoft.Office.Interop.Outlook;
-using Office = Microsoft.Office.Core;
+﻿using Office = Microsoft.Office.Core;
 using Microsoft.Office.Interop.Outlook;
 using stdole;
 using System.Windows.Forms;
@@ -18,9 +12,7 @@ namespace SpamGrabber_2007
         private Office.CommandBar _cbSpamGrabber;
         private Office.CommandBarButton _cbbDefaultHam;
         private Office.CommandBarButton _cbbDefaultSpam;
-        private Office.CommandBarButton _cbbReportToProfile;
         private Office.CommandBarButton _cbbCopyToClipboard;
-        private Office.CommandBarButton _cbbSendToSupport;
         private Office.CommandBarButton _cbbPreview;
         private Office.CommandBarButton _cbbOptions;
         private Office.CommandBarComboBox _cbcbProfile;
@@ -144,11 +136,7 @@ namespace SpamGrabber_2007
                 aCombo.Caption = "Select profile:";
                 aCombo.TooltipText = "Select profile to report to";
                 aCombo.BeginGroup = true;
-                aCombo.Clear();
-                foreach (SpamGrabberCommon.Profile profile in SpamGrabberCommon.UserProfiles.ProfileList)
-                {
-                    aCombo.AddItem(profile.Name);
-                }
+                this.LoadDropDown();
             }
             return aCombo;
         }
@@ -216,7 +204,7 @@ namespace SpamGrabber_2007
                 if (myOptions.DialogResult == DialogResult.OK)
                 {
                     // Refresh the drop down items
-                    //this.LoadDropDown();
+                    this.LoadDropDown();
                     // Refresh the command bar
                     this.ShowHideButtons();
                 }
@@ -224,6 +212,20 @@ namespace SpamGrabber_2007
             catch (System.Exception ex) // TODO we should not catch all exceptions
             {
                 MessageBox.Show("caught: \r\n" + ex.ToString());
+            }
+        }
+
+        private void LoadDropDown()
+        {
+            Office.CommandBarComboBox aCombo = (Office.CommandBarComboBox)
+                _cbSpamGrabber.FindControl(Office.MsoComboStyle.msoComboNormal, null, "Select spam profile", null, null);
+            if (aCombo != null)
+            {
+                aCombo.Clear();
+                foreach (SpamGrabberCommon.Profile profile in SpamGrabberCommon.UserProfiles.ProfileList)
+                {
+                    aCombo.AddItem(profile.Name);
+                }
             }
         }
 

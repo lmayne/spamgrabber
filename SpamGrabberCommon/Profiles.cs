@@ -481,33 +481,6 @@ namespace SpamGrabberCommon
                 //    "Profiles\\" + this._strProfileId);
                 SGGlobals.CreateKey(this._strProfileId, SGGlobals.BaseRegistryKey + "Profiles");
             }
-            //else
-            //{
-            //    // Open the existing key
-            //    regProfileKey = Registry.CurrentUser.OpenSubKey(SGGlobals.BaseRegistryKey +
-            //        "Profiles\\" + this._strProfileId, true);
-            //}
-
-            // Set all the saved standard information
-            //regProfileKey.SetValue("ProfileName", this.Name, RegistryValueKind.String);
-            //regProfileKey.SetValue("CleanHeaders", this.CleanHeaders, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("DeleteAfterReport", this.DeleteAfterReport, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("MarkAsReadAfterReport", this.MarkAsReadAfterReport, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("MoveToFolderAfterReport", this.MoveToFolderAfterReport, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("MoveFolderName", this.MoveFolderName, RegistryValueKind.String);
-            //regProfileKey.SetValue("MoveFolderStoreId", this.MoveFolderStoreId, RegistryValueKind.String);
-            //regProfileKey.SetValue("ReportSubject", this.ReportSubject, RegistryValueKind.String);
-            //regProfileKey.SetValue("ReportEndText", this.ReportEndText, RegistryValueKind.String);
-            //regProfileKey.SetValue("MessageBody", this.MessageBody, RegistryValueKind.String);
-            //regProfileKey.SetValue("AskVerify", this.AskVerify, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("KeepCopy", this.KeepCopy, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("SendMultiple", this.SendMultiple, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("IncludeIPAddress", this.IncludeIPAddress, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("UseRFC", this.UseRFC, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("SendReceiveAfterReport", this.SendReceiveAfterReport, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("FixMIME", this.FixMIME, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("ReportToAllProfiles", this.ReportToAllProfiles, RegistryValueKind.DWord);
-            //regProfileKey.SetValue("ProfileType", this.ProfileType, RegistryValueKind.DWord);
 
             SGGlobals.SaveSetting(strKey,"ProfileName", this.Name);
             SGGlobals.SaveSetting(strKey, "CleanHeaders", this.CleanHeaders);
@@ -524,6 +497,7 @@ namespace SpamGrabberCommon
             SGGlobals.SaveSetting(strKey, "SendMultiple", this.SendMultiple);
             SGGlobals.SaveSetting(strKey, "UseRFC", this.UseRFC);
             SGGlobals.SaveSetting(strKey, "SendReceiveAfterReport", this.SendReceiveAfterReport);
+
             // Save the array lists
             string strToAddress = "";
             string strBccAddress = "";
@@ -541,30 +515,6 @@ namespace SpamGrabberCommon
             SGGlobals.SaveSetting(strKey, "ToAddress", strToAddress);
             SGGlobals.SaveSetting(strKey, "BccAddress", strBccAddress);
         }
-
-        /// <summary>
-        /// Check if the current profile already exists in the registry
-        /// </summary>
-        /// <returns>True if profile exists</returns>
-        //private bool ProfileExists()
-        //{
-        //    // Get the root HKCU key
-        //    RegistryKey regSettings = Registry.CurrentUser;
-
-        //    // Get the selected profile
-        //    regSettings = regSettings.OpenSubKey(SGGlobals.BaseRegistryKey +
-        //        "Profiles\\" + this._strProfileId);
-
-        //    // Does the key exist?
-        //    if (regSettings == null)
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        return true;
-        //    }
-        //}
 
         #endregion
     }
