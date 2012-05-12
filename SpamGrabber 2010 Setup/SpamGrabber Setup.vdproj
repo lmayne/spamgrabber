@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_080C8A1ECF2617813FF8C77E86E3003E"
+        "OwnerKey" = "8:_474EEC332B814C28B912B49FADAAD997"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1B22CDF15E434C7FBB06146069F0FBF3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -22,12 +28,6 @@
         "Entry"
         {
         "MsmKey" = "8:_1DC09ED04BECD15532DD7455B285859B"
-        "OwnerKey" = "8:_474EEC332B814C28B912B49FADAAD997"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_27B7743802151805F42203C78BBCAD22"
         "OwnerKey" = "8:_474EEC332B814C28B912B49FADAAD997"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_30831AFE1269534B4B82CE30023123F2"
-        "OwnerKey" = "8:_474EEC332B814C28B912B49FADAAD997"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_379BBB78DCB6C0C654AB1F18136C5601"
         "OwnerKey" = "8:_474EEC332B814C28B912B49FADAAD997"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -130,7 +124,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_379BBB78DCB6C0C654AB1F18136C5601"
+        "OwnerKey" = "8:_080C8A1ECF2617813FF8C77E86E3003E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -173,12 +167,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_30831AFE1269534B4B82CE30023123F2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_27B7743802151805F42203C78BBCAD22"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -333,6 +321,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_080C8A1ECF2617813FF8C77E86E3003E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=5.0.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_080C8A1ECF2617813FF8C77E86E3003E"
+                    {
+                    "Name" = "8:SpamGrabberCommon.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:SpamGrabberCommon.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B22CDF15E434C7FBB06146069F0FBF3"
             {
             "SourcePath" = "8:..\\SpamGrabber 2010\\bin\\Release\\SpamGrabber.vsto"
@@ -367,37 +386,6 @@
                     }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Outlook.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_27B7743802151805F42203C78BBCAD22"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_27B7743802151805F42203C78BBCAD22"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
@@ -474,37 +462,6 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_379BBB78DCB6C0C654AB1F18136C5601"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_379BBB78DCB6C0C654AB1F18136C5601"
-                    {
-                    "Name" = "8:SpamGrabberCommon.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:SpamGrabberCommon.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_142C5307A6084AF99E338491A8FBA3A0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -764,15 +721,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SpamGrabber"
-        "ProductCode" = "8:{B5B81E6E-C791-49D7-B2BF-4455F0C15CA4}"
-        "PackageCode" = "8:{25C29FA2-F835-4A8C-B7D1-76B7A29AD0F3}"
+        "ProductCode" = "8:{1EC38F25-0CE0-4693-8B32-DDC51467BDCD}"
+        "PackageCode" = "8:{ABCBACDF-5000-4A1D-9436-D95CD6045C6C}"
         "UpgradeCode" = "8:{E4CF75AF-5BE8-4022-B773-F41508940F93}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:5.0.0"
+        "ProductVersion" = "8:5.0.1"
         "Manufacturer" = "8:Leon Mayne"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.spamgrabber.org"

@@ -214,6 +214,9 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>SolutionInfo.cs</Link>
+    </Compile>
     <Compile Include="AxHost2.cs">
       <SubType>Component</SubType>
     </Compile>

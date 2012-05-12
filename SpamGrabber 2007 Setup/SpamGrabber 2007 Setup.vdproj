@@ -39,12 +39,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4E34DC1A88EB5471D27E01C647594F66"
-        "OwnerKey" = "8:_53342ABDD2A648259EAC8F3557795E35"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_53342ABDD2A648259EAC8F3557795E35"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -87,6 +81,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D4AC8F3166676B9BDD91F7092C12C89E"
+        "OwnerKey" = "8:_53342ABDD2A648259EAC8F3557795E35"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E9252A60AE96489995EAF01368799317"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -112,7 +112,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4E34DC1A88EB5471D27E01C647594F66"
+        "OwnerKey" = "8:_D4AC8F3166676B9BDD91F7092C12C89E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -182,6 +182,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -342,37 +355,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4E34DC1A88EB5471D27E01C647594F66"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_4E34DC1A88EB5471D27E01C647594F66"
-                    {
-                    "Name" = "8:SpamGrabberCommon.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:SpamGrabberCommon.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_7C4A8953C0684D579A99092DAD7FEED0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_676D24949E51BDF5606749A1EFE9E68B"
             {
             "AssemblyRegister" = "3:1"
@@ -483,6 +465,37 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D4AC8F3166676B9BDD91F7092C12C89E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:SpamGrabberCommon, Version=5.0.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D4AC8F3166676B9BDD91F7092C12C89E"
+                    {
+                    "Name" = "8:SpamGrabberCommon.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:SpamGrabberCommon.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_7C4A8953C0684D579A99092DAD7FEED0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -649,15 +662,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SpamGrabber"
-        "ProductCode" = "8:{1BFDCC97-6110-4032-B92A-5F9980E166B2}"
-        "PackageCode" = "8:{007C6C34-086F-4E86-AF09-16C4DA3B7681}"
+        "ProductCode" = "8:{3A3DE48B-6831-42B9-98AE-8091841942A8}"
+        "PackageCode" = "8:{1DC0A62D-9A30-4FB6-9AE9-C49C7B2E1B01}"
         "UpgradeCode" = "8:{949285A0-546E-43AA-A133-6279FDAA337E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:5.0.1"
         "Manufacturer" = "8:Leon Mayne"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.spamgrabber.org"

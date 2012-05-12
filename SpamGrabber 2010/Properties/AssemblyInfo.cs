@@ -7,7 +7,7 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SpamGrabber")]
-[assembly: AssemblyDescription("Spam reporting utility for Outlook")]
+[assembly: AssemblyDescription("Spam reporting utility for Outlook 2010")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Leon Mayne")]
 [assembly: AssemblyProduct("SpamGrabber")]
