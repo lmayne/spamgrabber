@@ -125,20 +125,18 @@ namespace SpamGrabber_2007
 
         private Office.CommandBarComboBox AddComboBox(Office.CommandBar commandBar)
         {
-            Office.CommandBarComboBox aCombo = (Office.CommandBarComboBox)
-                commandBar.FindControl(Office.MsoComboStyle.msoComboNormal, null, "Select spam profile", null, null);
-            if (aCombo == null)
+            if (_cbcbProfile == null)
             {
-                aCombo = (Office.CommandBarComboBox)
+                _cbcbProfile = (Office.CommandBarComboBox)
                     commandBar.Controls.Add(Office.MsoControlType.msoControlComboBox, 1, "Select spam profile", commandBar.Controls.Count, true);
 
-                aCombo.Style = Office.MsoComboStyle.msoComboLabel;
-                aCombo.Caption = "Select profile:";
-                aCombo.TooltipText = "Select profile to report to";
-                aCombo.BeginGroup = true;
+                _cbcbProfile.Style = Office.MsoComboStyle.msoComboLabel;
+                _cbcbProfile.Caption = "Select profile:";
+                _cbcbProfile.TooltipText = "Select profile to report to";
+                _cbcbProfile.BeginGroup = true;
                 this.LoadDropDown();
             }
-            return aCombo;
+            return _cbcbProfile;
         }
 
         private void ReportSpam(Office.CommandBarButton btn, ref bool cancel)
@@ -163,10 +161,17 @@ namespace SpamGrabber_2007
 
         private void ReportSelected(Office.CommandBarButton btn, ref bool cancel)
         {
-            Profile objProfile = SpamGrabberCommon.UserProfiles.GetProfileByName(this._cbcbProfile.Text);
-            if (objProfile != null)
+            try
             {
-                Reporting.SendReports(objProfile.Id);
+                Profile objProfile = SpamGrabberCommon.UserProfiles.GetProfileByName(this._cbcbProfile.Text);
+                if (objProfile != null)
+                {
+                    Reporting.SendReports(objProfile.Id);
+                }
+            }
+            catch (ProfileNotFoundException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -217,14 +222,12 @@ namespace SpamGrabber_2007
 
         private void LoadDropDown()
         {
-            Office.CommandBarComboBox aCombo = (Office.CommandBarComboBox)
-                _cbSpamGrabber.FindControl(Office.MsoComboStyle.msoComboNormal, null, "Select spam profile", null, null);
-            if (aCombo != null)
+            if (_cbcbProfile != null)
             {
-                aCombo.Clear();
+                _cbcbProfile.Clear();
                 foreach (SpamGrabberCommon.Profile profile in SpamGrabberCommon.UserProfiles.ProfileList)
                 {
-                    aCombo.AddItem(profile.Name);
+                    _cbcbProfile.AddItem(profile.Name);
                 }
             }
         }
