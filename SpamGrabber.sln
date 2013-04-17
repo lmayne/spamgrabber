@@ -1,15 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabber 2010", "SpamGrabber 2010\SpamGrabber 2010.csproj", "{B687AB9C-105F-458A-96B0-068FD9AE0BAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabberCommon", "SpamGrabberCommon\SpamGrabberCommon.csproj", "{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SpamGrabber 2010 Setup", "SpamGrabber 2010 Setup\SpamGrabber Setup.vdproj", "{E6244039-D574-4CB1-A146-923FFDE0AAF9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpamGrabber 2007", "SpamGrabber 2007\SpamGrabber 2007.csproj", "{1E2773AA-7FFA-4359-93B1-2D2F406CA822}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SpamGrabber 2007 Setup", "SpamGrabber 2007 Setup\SpamGrabber 2007 Setup.vdproj", "{C93F2503-A588-4832-ABED-7C5A7A673A3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,17 +41,6 @@ Global
 		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Release|x64.ActiveCfg = Release|Any CPU
 		{87F19DA3-18B2-469D-A0DB-CFF6FB106FFE}.Release|x64.Build.0 = Release|Any CPU
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.64 Bit|Any CPU.ActiveCfg = 64 Bit
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.64 Bit|Any CPU.Build.0 = 64 Bit
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.64 Bit|x64.ActiveCfg = 64 Bit
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.64 Bit|x64.Build.0 = 64 Bit
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Debug|Any CPU.ActiveCfg = Debug
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Debug|x64.ActiveCfg = Debug
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Debug|x64.Build.0 = Debug
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Release|Any CPU.ActiveCfg = Release
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Release|Any CPU.Build.0 = Release
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Release|x64.ActiveCfg = Release
-		{E6244039-D574-4CB1-A146-923FFDE0AAF9}.Release|x64.Build.0 = Release
 		{1E2773AA-7FFA-4359-93B1-2D2F406CA822}.64 Bit|Any CPU.ActiveCfg = Release|Any CPU
 		{1E2773AA-7FFA-4359-93B1-2D2F406CA822}.64 Bit|Any CPU.Build.0 = Release|Any CPU
 		{1E2773AA-7FFA-4359-93B1-2D2F406CA822}.64 Bit|x64.ActiveCfg = Release|Any CPU
@@ -65,12 +50,6 @@ Global
 		{1E2773AA-7FFA-4359-93B1-2D2F406CA822}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E2773AA-7FFA-4359-93B1-2D2F406CA822}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E2773AA-7FFA-4359-93B1-2D2F406CA822}.Release|x64.ActiveCfg = Release|Any CPU
-		{C93F2503-A588-4832-ABED-7C5A7A673A3F}.64 Bit|Any CPU.ActiveCfg = Release
-		{C93F2503-A588-4832-ABED-7C5A7A673A3F}.64 Bit|x64.ActiveCfg = Release
-		{C93F2503-A588-4832-ABED-7C5A7A673A3F}.Debug|Any CPU.ActiveCfg = Debug
-		{C93F2503-A588-4832-ABED-7C5A7A673A3F}.Debug|x64.ActiveCfg = Debug
-		{C93F2503-A588-4832-ABED-7C5A7A673A3F}.Release|Any CPU.ActiveCfg = Release
-		{C93F2503-A588-4832-ABED-7C5A7A673A3F}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
