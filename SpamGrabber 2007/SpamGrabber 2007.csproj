@@ -161,7 +161,7 @@
     </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>596378004CD051A6AB6D171BE73D784B4A7DA887</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6838FCF9C1B1B4A8FA5B7F7502E3438B6C52ABC2</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestTimestampUrl>http://timestamp.verisign.com/scripts/timstamp.dll</ManifestTimestampUrl>
@@ -170,7 +170,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>SpamGrabber 2007_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>SpamGrabber2010.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
@@ -258,6 +258,7 @@
       <SubType>Code</SubType>
     </Compile>
     <None Include="SpamGrabber 2007_TemporaryKey.pfx" />
+    <None Include="SpamGrabber2010.snk" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
